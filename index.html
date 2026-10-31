@@ -1117,6 +1117,7 @@
             <div id="riskStats" style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;"></div>
             <div id="riskWeather" style="margin-top:16px;"></div>
             <div id="riskForecast" style="margin-top:14px;"></div>
+            <div id="riskExplain" style="margin-top:16px;"></div>
             <div id="riskTable" style="overflow:auto;max-height:560px;margin-top:14px;"></div>
             <p style="margin:12px 0 0;color:#64748b;font-size:12px;">
                 Probability that a trip point that has <b>already faulted</b> faults again within
@@ -3094,6 +3095,53 @@
                 return e ? { label: e[0], n: e[1] } : null;
             }
 
+            // ---- why: feature attribution (permutation-sampled Shapley) ----
+            const GCOL = { 'fault history': '#0891b2', weather: '#7c5cf0', 'last fault cause': '#f59e0b',
+                           season: '#14b8a6', asset: '#94a3b8', other: '#64748b' };
+
+            function explainPanel() {
+                const e = data.explain;
+                if (!e || !e.features) {
+                    return '<div style="font-size:12px;color:#64748b;">No attribution in this build of ' +
+                        'risk_live.json - rerun refresh.py with --with-features.</div>';
+                }
+                const top = e.features.slice(0, 9);
+                const max = Math.max(...top.map(f => f.share)) || 1;
+                const bars = top.map(f => {
+                    const col = GCOL[f.group] || '#64748b';
+                    return '<div style="display:flex;align-items:center;gap:9px;margin:3px 0;">' +
+                        '<div style="width:210px;font-size:12px;color:#cbd5e1;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="' + esc(f.feature) + '">' + esc(f.label) + '</div>' +
+                        '<div style="flex:1;background:#0f172a;border-radius:4px;height:13px;">' +
+                        '<div style="width:' + (100 * f.share / max).toFixed(1) + '%;height:13px;background:' + col + ';border-radius:4px;"></div></div>' +
+                        '<div style="width:44px;font-size:12px;color:#94a3b8;">' + (f.share * 100).toFixed(0) + '%</div></div>';
+                }).join('');
+                const pills = (e.groups || []).map(g => '<span style="display:inline-flex;align-items:center;gap:6px;' +
+                    'background:#0f172a;border:1px solid #29394f;border-radius:20px;padding:3px 10px;font-size:12px;color:#cbd5e1;">' +
+                    '<span style="width:9px;height:9px;border-radius:50%;background:' + (GCOL[g.group] || '#64748b') + ';"></span>' +
+                    esc(g.group) + ' <b style="color:#e2e8f0;">' + (g.share * 100).toFixed(0) + '%</b></span>').join(' ');
+                return '<div style="font-size:14px;color:#cbd5e1;margin-bottom:3px;">' +
+                    '<i class="fas fa-magnifying-glass-chart"></i> Why this ranking &mdash; what the model actually uses</div>' +
+                    '<div style="font-size:12px;color:#64748b;margin-bottom:10px;">Average absolute Shapley value across the ' +
+                    'ranked trip points: how much each input moves the probability, in probability points. ' +
+                    'Shares are of the total movement, so they add to 100%.</div>' +
+                    '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">' + pills + '</div>' + bars +
+                    '<div style="font-size:11px;color:#64748b;margin-top:9px;">' + esc(e.method || '') +
+                    '. Per-trip-point drivers appear under the risk figure in the table.</div>';
+            }
+
+            function driversLine(r) {
+                const e = data.explain;
+                const d = e && e.drivers ? e.drivers[r.tp] : null;
+                if (!d || !d.length) return '';
+                const parts = d.slice(0, 2).map(x => {
+                    const arrow = x.shap >= 0 ? '&#9650;' : '&#9660;';
+                    const col = x.shap >= 0 ? '#dc2626' : '#0f9d68';
+                    return '<span style="color:' + col + ';">' + arrow + '</span> ' + esc(x.label);
+                });
+                return '<div style="font-size:10px;color:#64748b;margin-top:3px;white-space:normal;">' +
+                    parts.join(' &middot; ') + '</div>';
+            }
+
             let data = null, error = null;
             let armed = false, uploaded = null;   // risk is shown only after a dataset is uploaded
             const $ = id => document.getElementById(id);
@@ -3196,7 +3244,7 @@
                          '<td ' + td + '>' + esc(r.inst) + '</td>' +
                          '<td ' + td + '>' + equipCell(r) + '</td>' +
                          '<td ' + td + '>' + esc(r.station) + '</td>' +
-                         '<td ' + td + '><b>' + (r.prob * 100).toFixed(1) + '%</b></td>' +
+                         '<td ' + td + '><b>' + (r.prob * 100).toFixed(1) + '%</b>' + driversLine(r) + '</td>' +
                          '<td ' + td + '><span style="background:' + b[0] + ';color:' + b[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + r.likelihood + '</span></td>' +
                          '<td ' + td + '><span title="' + esc(r.likelihood) + ' likelihood x ' + esc(r.consequence) + ' consequence" style="background:' + c[0] + ';color:' + c[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + esc(r.consequence || '&ndash;') + '</span><div style="font-size:10px;color:#64748b;margin-top:2px;">' + esc(r.consequence_reason || '') + '</div></td>' +
                          '<td ' + td + '>' + causeCell(r) + '</td>' +
@@ -3352,7 +3400,7 @@
                 if (!el) return;
                 if (!armed) {
                     $('riskMeta').textContent = 'Waiting for data \u2014 upload test_filled.xlsx (or load a Google Sheet) to show the risk ranking.';
-                    ['riskStats', 'riskWeather', 'riskForecast', 'riskMatrix'].forEach(id => { const e = $(id); if (e) e.innerHTML = ''; });
+                    ['riskStats', 'riskWeather', 'riskForecast', 'riskExplain', 'riskMatrix'].forEach(id => { const e = $(id); if (e) e.innerHTML = ''; });
                     el.innerHTML = '<div style="padding:28px 16px;text-align:center;color:#94a3b8;line-height:1.8;">' +
                         '<i class="fas fa-upload" style="font-size:28px;color:#475569;"></i><br>' +
                         '<b style="color:#e2e8f0;">No data loaded yet.</b><br>' +
@@ -3380,6 +3428,7 @@
                 $('riskStats').innerHTML = stats(list);
                 $('riskWeather').innerHTML = weather();
                 $('riskForecast').innerHTML = forecast();
+                $('riskExplain').innerHTML = explainPanel();
                 try { $('riskTable').innerHTML = table(list); }
                 catch (e) { console.error('risk table failed', e);
                     $('riskTable').innerHTML = '<div style="color:#f87171;padding:14px;font-size:13px;">' +
