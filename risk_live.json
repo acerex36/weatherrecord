@@ -13,7 +13,7 @@
   "consequence_source": "asset",
   "consequence_note": "consequence is an asset-role proxy: PMU / substation switchboard = Major, PPU / PDB = Moderate, service-level trip point = Minor. The records contain no outage duration or customer count, so this is a judgement call, not a measurement. Supply MVData...csv (CustInt / SaidiTNB) and rerun with --consequence cust_int to measure it.",
   "n_trip_points": 430,
-  "generated": "2026-10-27T21:05:06",
+  "generated": "2026-10-31T12:37:18",
   "note": "consequence is an asset-role proxy: PMU / substation switchboard = Major, PPU / PDB = Moderate, service-level trip point = Minor. The records contain no outage duration or customer count, so this is a judgement call, not a measurement. Supply MVData...csv (CustInt / SaidiTNB) and rerun with --consequence cust_int to measure it. Identifiers anonymised for a public demo build.",
   "demo": true
  },
@@ -5361,163 +5361,165 @@
   "note": "observed lags only - these are 16 of the 35 model inputs, summarised per station. The 7-day bars cover the days before the scoring date, i.e. exactly the period the lags are computed from. No forecast is used: the model was trained on weather that has already happened."
  },
  "forecast": {
-  "generated": "2026-10-27T20:49:05",
+  "generated": "2026-10-31T12:37:02",
   "days": 7,
   "stations": {
    "ST-3": [
     {
-     "date": "2026-10-27",
-     "rain_mm": 12.7,
-     "temp_c": 26.0,
-     "rh_pct": 89,
-     "gust_kmh": 35.3
+     "date": "2026-10-31",
+     "rain_mm": 4.4,
+     "temp_c": 26.8,
+     "rh_pct": 88,
+     "gust_kmh": 30.6
     },
     {
-     "date": "2026-10-28",
-     "rain_mm": 16.8,
+     "date": "2026-11-01",
+     "rain_mm": 11.4,
+     "temp_c": 26.1,
+     "rh_pct": 92,
+     "gust_kmh": 21.6
+    },
+    {
+     "date": "2026-11-02",
+     "rain_mm": 5.7,
+     "temp_c": 25.7,
+     "rh_pct": 94,
+     "gust_kmh": 31.3
+    },
+    {
+     "date": "2026-11-03",
+     "rain_mm": 4.6,
      "temp_c": 25.6,
      "rh_pct": 92,
-     "gust_kmh": 22.7
-    },
-    {
-     "date": "2026-10-29",
-     "rain_mm": 14.5,
-     "temp_c": 25.6,
-     "rh_pct": 94,
-     "gust_kmh": 25.6
-    },
-    {
-     "date": "2026-10-30",
-     "rain_mm": 9.0,
-     "temp_c": 25.8,
-     "rh_pct": 91,
      "gust_kmh": 24.8
     },
     {
-     "date": "2026-10-31",
-     "rain_mm": 4.2,
-     "temp_c": 25.9,
+     "date": "2026-11-04",
+     "rain_mm": 6.6,
+     "temp_c": 25.8,
+     "rh_pct": 92,
+     "gust_kmh": 25.6
+    },
+    {
+     "date": "2026-11-05",
+     "rain_mm": 10.2,
+     "temp_c": 25.7,
      "rh_pct": 92,
      "gust_kmh": 28.8
     },
     {
-     "date": "2026-11-01",
-     "rain_mm": 8.7,
-     "temp_c": 26.3,
-     "rh_pct": 90,
-     "gust_kmh": 25.2
-    },
-    {
-     "date": "2026-11-02",
-     "rain_mm": 8.4,
-     "temp_c": 25.3,
-     "rh_pct": 92,
-     "gust_kmh": 30.2
+     "date": "2026-11-06",
+     "rain_mm": 6.6,
+     "temp_c": 25.8,
+     "rh_pct": 91,
+     "gust_kmh": 29.9
     }
    ],
    "ST-1": [
     {
-     "date": "2026-10-27",
-     "rain_mm": 23.8,
-     "temp_c": 26.0,
-     "rh_pct": 90,
-     "gust_kmh": 31.3
-    },
-    {
-     "date": "2026-10-28",
-     "rain_mm": 18.1,
-     "temp_c": 25.5,
-     "rh_pct": 94,
-     "gust_kmh": 21.6
-    },
-    {
-     "date": "2026-10-29",
-     "rain_mm": 15.4,
-     "temp_c": 25.4,
-     "rh_pct": 93,
-     "gust_kmh": 23.8
-    },
-    {
-     "date": "2026-10-30",
-     "rain_mm": 4.3,
-     "temp_c": 25.8,
-     "rh_pct": 91,
-     "gust_kmh": 25.2
-    },
-    {
      "date": "2026-10-31",
-     "rain_mm": 6.5,
-     "temp_c": 25.6,
-     "rh_pct": 92,
-     "gust_kmh": 22.7
+     "rain_mm": 2.7,
+     "temp_c": 27.1,
+     "rh_pct": 86,
+     "gust_kmh": 27.4
     },
     {
      "date": "2026-11-01",
-     "rain_mm": 10.5,
-     "temp_c": 25.9,
-     "rh_pct": 91,
-     "gust_kmh": 22.7
+     "rain_mm": 8.4,
+     "temp_c": 26.0,
+     "rh_pct": 92,
+     "gust_kmh": 24.5
     },
     {
      "date": "2026-11-02",
-     "rain_mm": 14.7,
-     "temp_c": 25.0,
+     "rain_mm": 28.8,
+     "temp_c": 25.3,
      "rh_pct": 95,
-     "gust_kmh": 36.0
+     "gust_kmh": 19.8
+    },
+    {
+     "date": "2026-11-03",
+     "rain_mm": 25.5,
+     "temp_c": 25.3,
+     "rh_pct": 94,
+     "gust_kmh": 27.7
+    },
+    {
+     "date": "2026-11-04",
+     "rain_mm": 8.1,
+     "temp_c": 25.4,
+     "rh_pct": 93,
+     "gust_kmh": 24.1
+    },
+    {
+     "date": "2026-11-05",
+     "rain_mm": 26.4,
+     "temp_c": 25.4,
+     "rh_pct": 93,
+     "gust_kmh": 24.1
+    },
+    {
+     "date": "2026-11-06",
+     "rain_mm": 17.1,
+     "temp_c": 25.6,
+     "rh_pct": 91,
+     "gust_kmh": 34.6
     }
    ],
    "ST-2": [
     {
-     "date": "2026-10-27",
-     "rain_mm": 12.4,
-     "temp_c": 26.0,
-     "rh_pct": 89,
-     "gust_kmh": 31.7
-    },
-    {
-     "date": "2026-10-28",
-     "rain_mm": 12.7,
-     "temp_c": 25.5,
-     "rh_pct": 92,
-     "gust_kmh": 21.2
-    },
-    {
-     "date": "2026-10-29",
-     "rain_mm": 13.1,
-     "temp_c": 25.3,
-     "rh_pct": 93,
-     "gust_kmh": 21.2
-    },
-    {
-     "date": "2026-10-30",
-     "rain_mm": 7.0,
-     "temp_c": 25.7,
-     "rh_pct": 91,
-     "gust_kmh": 24.1
-    },
-    {
      "date": "2026-10-31",
-     "rain_mm": 8.5,
-     "temp_c": 25.3,
-     "rh_pct": 91,
-     "gust_kmh": 26.3
+     "rain_mm": 8.7,
+     "temp_c": 26.8,
+     "rh_pct": 86,
+     "gust_kmh": 32.4
     },
     {
      "date": "2026-11-01",
-     "rain_mm": 8.7,
-     "temp_c": 25.9,
+     "rain_mm": 8.3,
+     "temp_c": 26.0,
      "rh_pct": 90,
-     "gust_kmh": 25.2
+     "gust_kmh": 14.8
     },
     {
      "date": "2026-11-02",
-     "rain_mm": 4.8,
-     "temp_c": 25.1,
+     "rain_mm": 9.3,
+     "temp_c": 25.4,
      "rh_pct": 93,
-     "gust_kmh": 29.9
+     "gust_kmh": 27.7
+    },
+    {
+     "date": "2026-11-03",
+     "rain_mm": 4.5,
+     "temp_c": 25.4,
+     "rh_pct": 93,
+     "gust_kmh": 21.6
+    },
+    {
+     "date": "2026-11-04",
+     "rain_mm": 6.3,
+     "temp_c": 25.4,
+     "rh_pct": 92,
+     "gust_kmh": 32.8
+    },
+    {
+     "date": "2026-11-05",
+     "rain_mm": 8.7,
+     "temp_c": 25.6,
+     "rh_pct": 91,
+     "gust_kmh": 23.0
+    },
+    {
+     "date": "2026-11-06",
+     "rain_mm": 8.1,
+     "temp_c": 25.8,
+     "rh_pct": 89,
+     "gust_kmh": 31.3
     }
    ]
   },
+  "stale_days": 0,
+  "dropped_past_days": 0,
   "used_by_model": false,
   "note": "Outlook from Open-Meteo. NOT an input to the model - the weather features are backward lags. Use it as context next to the ranking, never as a cause of a probability."
  }
