@@ -3077,6 +3077,16 @@
                     '<span style="color:#94a3b8;"> ' + c[0].pct + '%</span>' + second + '</span>';
             }
 
+            // what failed last time: the component and the equipment tag behind the consequence
+            function equipCell(r) {
+                const c = r.last_component, e = r.last_equip;
+                if (!c && !e) return '<span style="color:#475569;">&ndash;</span>';
+                const tip = (c ? 'component: ' + esc(c) : '') +
+                            (e ? (c ? ' &middot; ' : '') + 'equipment: ' + esc(e) : '');
+                return '<span class="riskbar" data-tip="' + tip + '" style="cursor:help;color:#cbd5e1;">' +
+                    esc(c || e) + '</span>';
+            }
+
             function topCause(list) {
                 const cnt = {};
                 list.forEach(r => { const c = causeFor(r); if (c && c[0]) cnt[c[0].label] = (cnt[c[0].label] || 0) + 1; });
@@ -3174,7 +3184,7 @@
                 if (!show.length) return '<div class="no-data" style="color:#94a3b8;padding:16px;">No trip point matches those filters.</div>';
                 const th = 'style="text-align:left;padding:7px 10px;color:#94a3b8;border-bottom:1px solid #29394f;white-space:nowrap;position:sticky;top:0;background:#16212f;"';
                 const td = 'style="padding:6px 10px;border-bottom:1px solid #1c283b;color:#e2e8f0;"';
-                const head = ['#', 'Trip point', 'Installation', 'Station', 'Risk (M6)', 'Band', 'Consequence', 'Likely cause', 'Rule: cnt 90 d', 'Days since last', 'Rating'];
+                const head = ['#', 'Trip point', 'Installation', 'Equipment', 'Station', 'Risk (M6)', 'Band', 'Consequence', 'Likely cause', 'Rule: cnt 90 d', 'Days since last', 'Rating'];
                 let h = '<table style="border-collapse:collapse;width:100%;font-size:13px;"><thead><tr>' +
                         head.map(x => '<th ' + th + '>' + x + '</th>').join('') + '</tr></thead><tbody>';
                 const CONS = { Major: ['#dc2626', '#fecaca'], Moderate: ['#f59e0b', '#fde68a'], Minor: ['#0f9d68', '#bbf7d0'] };
@@ -3184,10 +3194,11 @@
                     h += '<tr><td ' + td + '>' + (i + 1) + '</td>' +
                          '<td ' + td + '><b>' + esc(r.tp) + '</b></td>' +
                          '<td ' + td + '>' + esc(r.inst) + '</td>' +
+                         '<td ' + td + '>' + equipCell(r) + '</td>' +
                          '<td ' + td + '>' + esc(r.station) + '</td>' +
                          '<td ' + td + '><b>' + (r.prob * 100).toFixed(1) + '%</b></td>' +
                          '<td ' + td + '><span style="background:' + b[0] + ';color:' + b[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + r.likelihood + '</span></td>' +
-                         '<td ' + td + '><span title="' + esc(r.likelihood) + ' likelihood x ' + esc(r.consequence) + ' consequence" style="background:' + c[0] + ';color:' + c[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + esc(r.consequence || '&ndash;') + '</span></td>' +
+                         '<td ' + td + '><span title="' + esc(r.likelihood) + ' likelihood x ' + esc(r.consequence) + ' consequence" style="background:' + c[0] + ';color:' + c[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + esc(r.consequence || '&ndash;') + '</span><div style="font-size:10px;color:#64748b;margin-top:2px;">' + esc(r.consequence_reason || '') + '</div></td>' +
                          '<td ' + td + '>' + causeCell(r) + '</td>' +
                          '<td ' + td + '>' + (r.cnt_90d >= 2 ? '<span style="color:#dc2626;font-weight:700;">' + r.cnt_90d + ' flagged</span>' : r.cnt_90d) + '</td>' +
                          '<td ' + td + '>' + (r.days_since_last == null ? '&mdash;' : Math.round(r.days_since_last)) + '</td>' +
