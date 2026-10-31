@@ -1,0 +1,60 @@
+{
+  "features": [
+    "cnt_30d",
+    "cnt_90d",
+    "cnt_180d",
+    "cnt_365d",
+    "total_prior",
+    "days_since_last",
+    "cause_environment",
+    "cause_insulation",
+    "cause_soil",
+    "cause_third_party",
+    "cause_manufacture_install",
+    "cause_animal_tree",
+    "cause_other_unknown",
+    "month_sin",
+    "month_cos",
+    "temp_mean_3",
+    "rh_mean_3",
+    "rain_sum_3",
+    "temp_mean_7",
+    "rh_mean_7",
+    "rain_sum_7",
+    "temp_mean_14",
+    "rh_mean_14",
+    "rain_sum_14",
+    "temp_mean_30",
+    "rh_mean_30",
+    "rain_sum_30",
+    "rain_max_7",
+    "gust_max_7",
+    "soil_mean_7",
+    "soil_mean_30",
+    "age_years",
+    "size_mm2",
+    "age_missing",
+    "size_missing"
+  ],
+  "N": 90,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "fractions": [
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "hidden": [
+    64,
+    32,
+    16
+  ],
+  "numpy": "2.1.3",
+  "pandas": "2.2.3",
+  "python": "3.13.18"
+}

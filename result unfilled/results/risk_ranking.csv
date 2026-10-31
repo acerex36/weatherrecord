@@ -1,0 +1,257 @@
+tp,inst,station,prob,likelihood,cust_int_prior,consequence,rating,cnt_90d,days_since_last,total_prior
+PDB KUBANG PERUN KAN00255,Overhead,Perlis,0.5887742638587952,High,,Minor,Medium: schedule inspection,1,70.59652777777778,5
+PPU POLITEKNIK PAUH PERLIS CB2,Underground,Perlis,0.4458177387714386,High,,Minor,Medium: schedule inspection,0,195.0951388888889,3
+BELLEZA GARDEN HOMES KJT18927 CB1,Underground,Jitra,0.4321281909942627,High,,Minor,Medium: schedule inspection,0,132.4361111111111,6
+PPU DARULAMAN 9K5,Underground,Jitra,0.3438188433647156,High,,Minor,Medium: schedule inspection,1,79.4125,7
+PPU LOJI AIR ARAU GIS 5K5,Underground,Perlis,0.32911160588264465,High,,Minor,Medium: schedule inspection,0,175.3875,5
+PPU JERLUN SJ6,Underground,Jitra,0.2658519148826599,High,,Minor,Medium: schedule inspection,0,118.08958333333334,6
+PPU CHANGLOON CL4,Underground,Jitra,0.26027047634124756,High,,Minor,Medium: schedule inspection,0,102.7388888888889,7
+PPU KUALA NERANG 7K5,Underground,Kuala Nerang,0.23659615218639374,High,,Minor,Medium: schedule inspection,1,83.02430555555556,5
+PEDU KKN00798,Overhead,Kuala Nerang,0.22666850686073303,High,,Minor,Medium: schedule inspection,1,37.48125,1
+PBT RUMAH PAM PERING KJT01152,Overhead,Jitra,0.22500406205654144,High,,Minor,Medium: schedule inspection,1,23.933333333333334,1
+PPU NAKA 1K5,Overhead,Kuala Nerang,0.22319674491882324,High,,Minor,Medium: schedule inspection,1,88.01597222222222,2
+PMU CHUPING CB8,Underground,Perlis,0.21580101549625397,High,,Minor,Medium: schedule inspection,1,68.26875,2
+SSU MRCB CVIA KAN03298,Overhead,Perlis,0.21060216426849365,High,,Minor,Medium: schedule inspection,1,89.27708333333334,3
+PERLIS SPECIALIST HOSPITAL KAN02779 CB1,Underground,Perlis,0.20629066228866577,High,,Minor,Medium: schedule inspection,0,1250.513888888889,1
+NAKA 33 6K5,Underground,Kuala Nerang,0.20187027752399445,High,,Minor,Medium: schedule inspection,1,39.35138888888889,1
+PDB BDR BARU NAKA KKN00375,Underground,Kuala Nerang,0.20160901546478271,High,,Minor,Medium: schedule inspection,0,1263.1138888888888,1
+JERLUN A/R PIDA 5,Underground,Jitra,0.19850246608257294,High,,Minor,Medium: schedule inspection,1,54.27569444444445,1
+PDB TMN AKASIA KKN00582 CB1,Underground,Kuala Nerang,0.19796328246593475,High,,Minor,Medium: schedule inspection,0,1272.4854166666667,1
+PPU KUALA NERANG 3K5,Underground,Kuala Nerang,0.19764026999473572,High,,Minor,Medium: schedule inspection,0,1273.3222222222223,1
+PDB SM CHANGLUN KJT00742,Underground,Jitra,0.19743667542934418,High,,Minor,Medium: schedule inspection,1,59.03819444444444,1
+PPU SIMPANG EMPAT CB6,Underground,Perlis,0.19471821188926697,High,,Minor,Medium: schedule inspection,0,1280.9375,1
+PDB TMN TG SARINA 6 KJT19072,Underground,Jitra,0.19361978769302368,High,,Minor,Medium: schedule inspection,1,65.11875,1
+PPU SHORUBBER CB2,Underground,Perlis,0.19359496235847473,High,,Minor,Medium: schedule inspection,1,58.765277777777776,1
+SEK MEN CHANGLUN KJT00895 CB1,Underground,Jitra,0.19014838337898254,High,,Minor,Medium: schedule inspection,0,151.56944444444446,3
+PPU DARULAMAN 3K5,Underground,Jitra,0.18884606659412384,High,,Minor,Medium: schedule inspection,1,69.74791666666667,3
+KODIANG KD5,Underground,Jitra,0.18019844591617584,High,,Minor,Medium: schedule inspection,1,6.013888888888889,1
+SHORUBBER CB4,Underground,Perlis,0.18017330765724182,Medium,,Minor,Low: routine monitoring,1,6.138888888888889,1
+PMU KANGAR CB13,Underground,Perlis,0.1797570139169693,Medium,,Minor,Low: routine monitoring,1,63.6375,2
+PDB PANGSAPURI KG.WAI KAN00647,Underground,Perlis,0.17952606081962585,Medium,,Minor,Low: routine monitoring,1,9.36875,1
+PDB PANGGAS KAN00281,Underground,Perlis,0.17952409386634827,Medium,,Minor,Low: routine monitoring,1,9.378472222222221,1
+PDB KLG BERAS PERING KJT01776,Underground,Jitra,0.17789854109287262,Medium,,Minor,Low: routine monitoring,1,17.52986111111111,1
+PDB TAMAN BUNGA PADI KAN00389,Underground,Perlis,0.16873452067375183,Medium,,Minor,Low: routine monitoring,1,89.98611111111111,1
+PDB TMN BELLEZA GARDEN HOMES KJT18927,Underground,Jitra,0.1669776886701584,Medium,,Minor,Low: routine monitoring,1,75.84791666666666,1
+PPU SHORUBBER CB10,Underground,Perlis,0.16621102392673492,Medium,,Minor,Low: routine monitoring,0,172.47847222222222,6
+NAKA 33 4K5,Underground,Kuala Nerang,0.16555103659629822,Medium,,Minor,Low: routine monitoring,1,15.296527777777778,1
+R PADANG BESAR 11,Underground,Perlis,0.16554860770702362,Medium,,Minor,Low: routine monitoring,1,15.334722222222222,1
+KUALA NERANG 1K5,Underground,Kuala Nerang,0.16292843222618103,Medium,,Minor,Low: routine monitoring,1,42.802083333333336,1
+PDB TMN PASU KJT00468,Underground,Jitra,0.16201390326023102,Medium,,Minor,Low: routine monitoring,1,35.24652777777778,1
+PMU CHUPING CB1,Underground,Perlis,0.1566305309534073,Medium,,Minor,Low: routine monitoring,0,182.08402777777778,2
+PDB SEKOLAH VOKASIONAL KANGAR KAN00472 CB1,Underground,Perlis,0.15122626721858978,Medium,,Minor,Low: routine monitoring,0,169.36875,2
+PPU BUKIT KETERI 1K5B,Underground,Perlis,0.14811035990715027,Medium,,Minor,Low: routine monitoring,0,124.27569444444444,2
+PPU LOJI AIR ARAU GIS 12K5,Underground,Jitra,0.14648184180259705,Medium,,Minor,Low: routine monitoring,0,116.13055555555556,6
+PMU KANGAR CB11,Underground,Perlis,0.14644816517829895,Medium,,Minor,Low: routine monitoring,0,131.0076388888889,1
+PDB TMN PASU KJT00468 CB1,Underground,Jitra,0.14523614943027496,Medium,,Minor,Low: routine monitoring,0,152.13472222222222,1
+PDB KUALA PERLIS KAN01162,Underground,Perlis,0.14495423436164856,Medium,,Minor,Low: routine monitoring,0,155.5236111111111,1
+PDB TMN DESA PAUH KAN00925,Underground,Perlis,0.14384277164936066,Medium,,Minor,Low: routine monitoring,0,169.07847222222222,1
+KLG DOUBLE SITE KJT01578 CB1,Underground,Jitra,0.14350225031375885,Medium,,Minor,Low: routine monitoring,0,173.26666666666668,1
+PMU TANJUNG PAUH TP9,Underground,Jitra,0.14342932403087616,Medium,,Minor,Low: routine monitoring,0,174.1652777777778,1
+PDB KLG BERAS SUPREME KJT01676 CB1,Underground,Jitra,0.14230120182037354,Medium,,Minor,Low: routine monitoring,0,383.22569444444446,1
+PDB BDR BARU NAKA KKN00375 CB1,Underground,Kuala Nerang,0.14006665349006653,Medium,,Minor,Low: routine monitoring,0,260.6013888888889,1
+PPU KODIANG KD6,Underground,Jitra,0.14005090296268463,Medium,,Minor,Low: routine monitoring,0,392.13125,1
+PBT KG. PADANG NYIOR KKN00302,Underground,Kuala Nerang,0.14004595577716827,Medium,,Minor,Low: routine monitoring,0,246.49444444444444,1
+PPU PELUBANG PL5,Underground,Jitra,0.13981521129608154,Medium,,Minor,Low: routine monitoring,0,393.4923611111111,1
+PDB KLG BERAS PERING KJT01775 CB1,Underground,Jitra,0.13967281579971313,Medium,,Minor,Low: routine monitoring,0,264.7055555555556,1
+S/SUIS INTRA GROWTH KJT18946,Underground,Jitra,0.13848602771759033,Medium,,Minor,Low: routine monitoring,0,401.2027777777778,1
+PPU KHEDN 6K5,Underground,Perlis,0.13831087946891785,Medium,,Minor,Low: routine monitoring,0,231.92777777777778,1
+PPU JERLUN SJ2,Underground,Jitra,0.138283371925354,Medium,,Minor,Low: routine monitoring,0,231.69583333333333,1
+A/R GENTING PALAS,Underground,Kuala Nerang,0.13812324404716492,Medium,,Minor,Low: routine monitoring,0,230.34305555555557,1
+PVCB TMN MERPATI KAN00716 CB1,Underground,Perlis,0.1371898353099823,Medium,,Minor,Low: routine monitoring,0,222.43402777777777,1
+FELDA CHUPING NO.2 KAN02701 CB1,Underground,Perlis,0.13650086522102356,Medium,,Minor,Low: routine monitoring,0,216.5673611111111,1
+PDB KUALA PERLIS KAN01164 CB1,Underground,Perlis,0.1361427903175354,Medium,,Minor,Low: routine monitoring,0,302.5763888888889,1
+PDB TMN SHAHRIZAD KAN00686,Underground,Perlis,0.1361130028963089,Medium,,Minor,Low: routine monitoring,0,304.2895833333333,1
+PDB POLIKLINIK ARAU KAN00902 CB1,Underground,Perlis,0.1356721669435501,Medium,,Minor,Low: routine monitoring,0,209.4777777777778,1
+PDB AMAN FISHMEAL KAN00623 CB1,Underground,Perlis,0.1347213089466095,Medium,,Minor,Low: routine monitoring,0,336.0861111111111,1
+PMU KUALA PERLIS CB10,Underground,Perlis,0.13441595435142517,Medium,,Minor,Low: routine monitoring,0,163.07083333333333,2
+PDB TMN HARMONI KANGAR KAN01925 CB1,Underground,Perlis,0.13417015969753265,Medium,,Minor,Low: routine monitoring,0,342.5131944444444,1
+PMU KANGAR CB4,Underground,Perlis,0.1333753615617752,Medium,,Minor,Low: routine monitoring,0,351.8208333333333,1
+SSU MRCB CVIA KAN03298 CB1,Underground,Perlis,0.13296915590763092,Medium,,Minor,Low: routine monitoring,0,218.98472222222222,2
+PVCB RUMAH PAM GUAR SANJI KAN00958,Overhead,Perlis,0.13262656331062317,Medium,,Minor,Low: routine monitoring,0,250.80694444444444,1
+PDB PANGSAPURI KG.WAI KAN00647 CB1,Underground,Perlis,0.13249538838863373,Medium,,Minor,Low: routine monitoring,0,359.24583333333334,1
+PPU PELUBANG PL3,Overhead,Jitra,0.1317378133535385,Medium,,Minor,Low: routine monitoring,0,377.52430555555554,1
+PMU CHUPING CB6,Underground,Perlis,0.1302953064441681,Medium,,Minor,Low: routine monitoring,0,126.43958333333333,4
+PLB SMPG BKT.TANGGA KJT00877 CB1,Overhead,Jitra,0.13006386160850525,Medium,,Minor,Low: routine monitoring,0,334.3125,1
+TMN NILAM KENCHANA KJT19364 CB1,Underground,Jitra,0.1299666464328766,Medium,,Minor,Low: routine monitoring,0,442.74305555555554,1
+SSBT RUMAH PAM PERING KJT01634,Overhead,Jitra,0.129721537232399,Medium,,Minor,Low: routine monitoring,0,386.6111111111111,1
+PPU SHORUBBER CB7,Overhead,Perlis,0.12843643128871918,Medium,,Minor,Low: routine monitoring,0,161.28680555555556,1
+FELDA CHUPING NO.2 KAN02702 CB1,Overhead,Perlis,0.1281733363866806,Medium,,Minor,Low: routine monitoring,0,141.54097222222222,1
+PPU JERLUN SJ7,Overhead,Jitra,0.12810498476028442,Low,,Minor,Low: routine monitoring,0,136.13333333333333,1
+PDB QTRS SM HOSBA KJT01800 CB1,Overhead,Jitra,0.12796299159526825,Low,,Minor,Low: routine monitoring,0,400.84513888888887,1
+SS 11KV SAMAK KJT19322,Overhead,Jitra,0.12702275812625885,Low,,Minor,Low: routine monitoring,0,408.56875,1
+PEKAN KAKI BUKIT KAN00139 CB1,Overhead,Perlis,0.12690752744674683,Low,,Minor,Low: routine monitoring,0,139.80069444444445,2
+PPU KHEDN 3K5,Underground,Perlis,0.12564913928508759,Low,,Minor,Low: routine monitoring,0,268.0215277777778,2
+RUMAH KEDAI 50 UNIT KJT19306 CB1,Overhead,Jitra,0.12489844858646393,Low,,Minor,Low: routine monitoring,0,425.7263888888889,1
+PMU KUALA PERLIS CB8,Underground,Perlis,0.12255756556987762,Low,,Minor,Low: routine monitoring,0,156.9625,2
+PPU UNIMAP GIS 2K5,Underground,Perlis,0.12182936072349548,Low,,Minor,Low: routine monitoring,0,209.06666666666666,2
+POLIKLINIK BESERI-VVIP KAN00305 CB1,Overhead,Perlis,0.12179017066955566,Low,,Minor,Low: routine monitoring,0,454.8652777777778,1
+PDB KLG PADI MAJU KAN01041 CB1,Underground,Perlis,0.12044064700603485,Low,,Minor,Low: routine monitoring,0,154.72222222222223,1
+PDB SMPG ABI KAN00315 CB1,Underground,Perlis,0.12022465467453003,Low,,Minor,Low: routine monitoring,0,169.54861111111111,1
+PDB TMN BESERI JAYA KAN00176 CB1,Underground,Perlis,0.12022042274475098,Low,,Minor,Low: routine monitoring,0,140.53958333333333,1
+KASTAM UNIT ANJING KAN00071 CB1,Underground,Perlis,0.1189415454864502,Low,,Minor,Low: routine monitoring,0,489.5625,1
+PDB TMN BUMITA KAN00597 CB1,Underground,Perlis,0.11849149316549301,Low,,Minor,Low: routine monitoring,0,237.64583333333334,2
+UKK PADANG BESAR KAN00047,Overhead,Perlis,0.11223425716161728,Low,,Minor,Low: routine monitoring,0,536.2347222222222,1
+SEK MEN CHANGLUN KJT00742 CB1,Underground,Jitra,0.11166564375162125,Low,,Minor,Low: routine monitoring,0,414.1645833333333,6
+PMU KUALA PERLIS CB2,Underground,Perlis,0.11127899587154388,Low,,Minor,Low: routine monitoring,0,289.8854166666667,2
+PDB TMN SRI NERANG KKN00033 CB1,Underground,Kuala Nerang,0.11123031377792358,Low,,Minor,Low: routine monitoring,0,514.8972222222222,1
+PDB TELEKOM LAMA KANGAR KAN00550 CB1,Underground,Perlis,0.11074521392583847,Low,,Minor,Low: routine monitoring,0,516.5041666666667,1
+PMU BUKIT KAYU HITAM BKH4,Underground,Jitra,0.10953355580568314,Low,,Minor,Low: routine monitoring,0,220.7236111111111,3
+PVCB TITI TINGGI KAN00091 CB1,Underground,Perlis,0.10754082351922989,Low,,Minor,Low: routine monitoring,0,527.2770833333333,1
+PBT KG. BARU PADANG SANAI KKN00700 CB1,Underground,Kuala Nerang,0.10753505676984787,Low,,Minor,Low: routine monitoring,0,527.2965277777778,1
+PDB ASRAMA UUM KJT01743 CB1,Underground,Jitra,0.1072729304432869,Low,,Minor,Low: routine monitoring,0,528.1902777777777,1
+PPU PELUBANG PL6,Underground,Jitra,0.10664000362157822,Low,,Minor,Low: routine monitoring,0,530.35625,1
+PPU CHANGLOON CL3,Underground,Jitra,0.10276241600513458,Low,,Minor,Low: routine monitoring,0,204.51666666666668,4
+PMU TANJUNG PAUH TP20,Underground,Jitra,0.09977862238883972,Low,,Minor,Low: routine monitoring,0,384.32916666666665,2
+PDB TELEKOM LAMA KANGAR KAN00551 CB1,Underground,Perlis,0.09942065179347992,Low,,Minor,Low: routine monitoring,0,350.77986111111113,2
+PPU SIMPANG EMPAT CB7,Underground,Perlis,0.09733347594738007,Low,,Minor,Low: routine monitoring,0,403.0388888888889,2
+TMN PELANGI JITRA KJT01863 CB1,Overhead,Jitra,0.09729102998971939,Low,,Minor,Low: routine monitoring,0,265.67569444444445,2
+PMU TANJUNG PAUH TP15,Underground,Jitra,0.09560009092092514,Low,,Minor,Low: routine monitoring,0,330.0125,3
+PPU PELUBANG 3K5,Underground,Jitra,0.09499481320381165,Low,,Minor,Low: routine monitoring,0,232.64305555555555,1
+PDB TELEKOM LAMA KANGAR KAN00548 CB1,Underground,Perlis,0.09473923593759537,Low,,Minor,Low: routine monitoring,0,211.27777777777777,1
+PDB PROTAB AGROBASE KJT01138 CB1,Underground,Jitra,0.0942782387137413,Low,,Minor,Low: routine monitoring,0,193.52569444444444,1
+PPU UUM SINTOK ST3,Underground,Jitra,0.09423771500587463,Low,,Minor,Low: routine monitoring,0,295.14166666666665,1
+PPU KHEDN 8K5,Underground,Perlis,0.09114857017993927,Low,,Minor,Low: routine monitoring,0,304.2895833333333,1
+PDB TMN MERBAU KJT01859 CB1,Underground,Jitra,0.08938906341791153,Low,,Minor,Low: routine monitoring,0,179.8972222222222,2
+PPU KUALA NERANG 4K5,Underground,Kuala Nerang,0.08849378675222397,Low,,Minor,Low: routine monitoring,0,485.9916666666667,2
+PPU KUALA NERANG 10K5,Underground,Kuala Nerang,0.08800216019153595,Low,,Minor,Low: routine monitoring,0,209.49652777777777,3
+PPU NAKA 3K5,Overhead,Kuala Nerang,0.08691240102052689,Low,,Minor,Low: routine monitoring,0,202.31041666666667,3
+PPU PADANG BESAR CB11,Underground,Perlis,0.08677776902914047,Low,,Minor,Low: routine monitoring,0,235.6,3
+PPU DARULAMAN 6K5,Underground,Jitra,0.0848446860909462,Low,,Minor,Low: routine monitoring,0,211.22222222222223,3
+PDB TMN BESERI JAYA KAN00178 CB1,Underground,Perlis,0.08389832079410553,Low,,Minor,Low: routine monitoring,0,604.5569444444444,1
+FELDA CHUPING NO.2 KAN02699 CB1,Overhead,Perlis,0.08381660282611847,Low,,Minor,Low: routine monitoring,0,403.37152777777777,2
+PATOD R/PAM PS 1 KJT01163,Overhead,Jitra,0.08372331410646439,Low,,Minor,Low: routine monitoring,0,675.1604166666667,1
+PDB QTRS SM HOSBA KJT01798,Underground,Jitra,0.0835936963558197,Low,,Minor,Low: routine monitoring,0,609.3659722222222,4
+PMU KANGAR CB16,Underground,Perlis,0.08318664878606796,Low,,Minor,Low: routine monitoring,0,276.52708333333334,3
+BAYAN MAS NO.2 KJT01825 CB1,Underground,Jitra,0.08277589827775955,Low,,Minor,Low: routine monitoring,0,232.10763888888889,3
+PPU CHANGLOON CL6,Underground,Jitra,0.08252741396427155,Low,,Minor,Low: routine monitoring,0,275.30069444444445,3
+PPU DARULAMAN 10K5,Underground,Jitra,0.08122725784778595,Low,,Minor,Low: routine monitoring,0,184.38541666666666,4
+BEHOR MENTALOON KAN00975 CB1,Underground,Perlis,0.08080994337797165,Low,,Minor,Low: routine monitoring,0,432.5451388888889,1
+PPU PADANG BESAR CB1,Underground,Perlis,0.08043113350868225,Low,,Minor,Low: routine monitoring,0,436.30902777777777,1
+PPU MINI PPU L/AIR PDG SANAI LA3,Underground,Kuala Nerang,0.07873499393463135,Low,,Minor,Low: routine monitoring,0,334.31319444444443,6
+PDB FLAT POLIS KANGAR KAN00517,Underground,Perlis,0.07739894837141037,Low,,Minor,Low: routine monitoring,0,317.82708333333335,2
+PPU MINI PPU KERPAN KRPN 5K5,Underground,Jitra,0.07687592506408691,Low,,Minor,Low: routine monitoring,0,225.07291666666666,4
+PDB KLG BERAS PERING KJT01776 CB1,Underground,Jitra,0.07661737501621246,Low,,Minor,Low: routine monitoring,0,275.40069444444447,3
+PDB TMN BESERI JAYA KAN00176,Overhead,Perlis,0.07615039497613907,Low,,Minor,Low: routine monitoring,0,708.9993055555556,1
+SSBT RUMAH PAM PERING KJT01149,Overhead,Jitra,0.07555895298719406,Low,,Minor,Low: routine monitoring,0,711.7701388888889,1
+PMU CHUPING CB3,Underground,Perlis,0.07477255165576935,Low,,Minor,Low: routine monitoring,0,157.58194444444445,1
+S/S KLJ PERTANIAN BKT TANGGA KJT01848 CB1,Underground,Jitra,0.07377749681472778,Low,,Minor,Low: routine monitoring,0,166.5638888888889,1
+PPU KUALA NERANG 6K5,Overhead,Kuala Nerang,0.07163320481777191,Low,,Minor,Low: routine monitoring,0,209.48402777777778,4
+PPU BUKIT KETERI 3K5B,Underground,Perlis,0.0716031864285469,Low,,Minor,Low: routine monitoring,0,510.3888888888889,1
+PMU TANJUNG PAUH TP12,Underground,Jitra,0.07158456742763519,Low,,Minor,Low: routine monitoring,0,510.5173611111111,1
+PMU TANJUNG PAUH TP14,Underground,Jitra,0.06959429383277893,Low,,Minor,Low: routine monitoring,0,383.43819444444443,2
+PMU KANGAR CB1,Underground,Perlis,0.06902283430099487,Low,,Minor,Low: routine monitoring,0,528.4798611111111,1
+PBT KG. PADANG NYIOR KKN00302 CB1,Underground,Kuala Nerang,0.06846877187490463,Low,,Minor,Low: routine monitoring,0,532.4458333333333,1
+PDB QTRS SM HOSBA KJT01798 CB1,Underground,Jitra,0.06784192472696304,Low,,Minor,Low: routine monitoring,0,517.3506944444445,4
+SM SANGLANG KJT01475,Underground,Jitra,0.06714870780706406,Low,,Minor,Low: routine monitoring,0,670.3131944444444,1
+SEK MEN SANGLANG KAN01095 CB1,Underground,Perlis,0.0664042979478836,Low,,Minor,Low: routine monitoring,0,492.30833333333334,3
+A/R PIDA 5,Underground,Jitra,0.06604580581188202,Low,,Minor,Low: routine monitoring,0,360.51180555555555,3
+FISHING NET KAN00068,Underground,Perlis,0.06593189388513565,Low,,Minor,Low: routine monitoring,0,659.4347222222223,2
+RPA PADANG BESAR KAN02910 CB1,Underground,Perlis,0.06569138914346695,Low,,Minor,Low: routine monitoring,0,550.6006944444445,1
+PPU DARULAMAN 8K5,Underground,Jitra,0.06512380391359329,Low,,Minor,Low: routine monitoring,0,659.5111111111111,4
+STN SUIS KLG DXN KJT00246,Underground,Jitra,0.06463180482387543,Low,,Minor,Low: routine monitoring,0,681.4805555555556,1
+PLB KAJI CUACA KAN00789,Overhead,Perlis,0.0638902485370636,Low,,Minor,Low: routine monitoring,0,767.7041666666667,1
+POLIKLINIK BESERI-VVIP KAN00305,Underground,Perlis,0.06378311663866043,Low,,Minor,Low: routine monitoring,0,685.3375,1
+PPU SIMPANG EMPAT CB9,Underground,Perlis,0.0635627880692482,Low,,Minor,Low: routine monitoring,0,530.2270833333333,3
+PMU KANGAR CB6,Underground,Perlis,0.06343431770801544,Low,,Minor,Low: routine monitoring,0,532.5597222222223,3
+S/S KLJ PERTANIAN BKT TANGGA KJT01848,Underground,Jitra,0.0632985532283783,Low,,Minor,Low: routine monitoring,0,687.5611111111111,1
+PMU TANJUNG PAUH TP19,Underground,Jitra,0.06288623809814453,Low,,Minor,Low: routine monitoring,0,542.5625,3
+PDB KOMP KASTAM & IMIGRESEN KAN00023,Overhead,Perlis,0.06214265152812004,Low,,Minor,Low: routine monitoring,0,776.5847222222222,1
+PVCB TMN MERPATI KAN03103 CB1,Underground,Perlis,0.06211094185709953,Low,,Minor,Low: routine monitoring,0,573.9444444444445,1
+PMU KUALA PERLIS CB5,Overhead,Perlis,0.06084832176566124,Low,,Minor,Low: routine monitoring,0,784.8270833333333,1
+PPU CHANGLOON CL5,Overhead,Jitra,0.06084749102592468,Low,,Minor,Low: routine monitoring,0,784.8326388888889,1
+PPU LOJI AIR ARAU GIS 6K5,Underground,Perlis,0.06073899194598198,Low,,Minor,Low: routine monitoring,0,699.5770833333333,1
+SSU GIANT KGAR KAN02771,Underground,Perlis,0.060520146042108536,Low,,Minor,Low: routine monitoring,0,700.6263888888889,1
+A/R KG. TENGAH,Underground,Kuala Nerang,0.06006249412894249,Low,,Minor,Low: routine monitoring,0,619.1722222222222,3
+PDB ASRAMA UUM KJT01743,Underground,Jitra,0.059879884123802185,Low,,Minor,Low: routine monitoring,0,703.7166666666667,1
+PVCB SHOERUBBER KAN00740,Underground,Perlis,0.05940829589962959,Low,,Minor,Low: routine monitoring,0,706.0125,1
+PEKAN KAKI BUKIT KAN00140 CB1,Underground,Perlis,0.058777231723070145,Low,,Minor,Low: routine monitoring,0,485.47430555555553,2
+PDB TMN HARMONI KANGAR KAN01924,Underground,Perlis,0.05874618887901306,Low,,Minor,Low: routine monitoring,0,236.40555555555557,3
+TMN BUNGA PADI KAN00389,Underground,Perlis,0.056746043264865875,Low,,Minor,Low: routine monitoring,0,719.3034722222222,1
+PPU KUALA NERANG 1K5,Overhead,Kuala Nerang,0.05655686557292938,Low,,Minor,Low: routine monitoring,0,547.1354166666666,3
+KOMERSIAL SQUARE KOLEJ HEIGHT KJT19376,Underground,Jitra,0.05641099438071251,Low,,Minor,Low: routine monitoring,0,721.0173611111111,1
+PMU KUALA PERLIS CB11,Underground,Perlis,0.05581134557723999,Low,,Minor,Low: routine monitoring,0,724.1090277777778,1
+PPU MINI PPU ABI 1K5,Underground,Perlis,0.05574309453368187,Low,,Minor,Low: routine monitoring,0,618.5479166666667,1
+PPU POLITEKNIK PAUH PERLIS 3,Underground,Perlis,0.05502879247069359,Low,,Minor,Low: routine monitoring,0,728.1909722222222,1
+STN SUIS ICQS KJT19258,Underground,Jitra,0.054502662271261215,Low,,Minor,Low: routine monitoring,0,559.3993055555555,2
+PPU SHORUBBER CB5,Underground,Perlis,0.05340985581278801,Low,,Minor,Low: routine monitoring,0,636.6138888888889,3
+PDB PROTAB AGROBASE KJT01140,Underground,Jitra,0.05336148291826248,Low,,Minor,Low: routine monitoring,0,631.8888888888889,1
+PPU LOJI AIR ARAU GIS 30,Overhead,Perlis,0.05288819596171379,Low,,Minor,Low: routine monitoring,0,859.1805555555555,1
+SEK MEN SANGLANG KAN01095,Underground,Perlis,0.05108640342950821,Low,,Minor,Low: routine monitoring,0,642.5270833333333,1
+PDB PROTAB AGROBASE KJT01138,Underground,Jitra,0.05059182271361351,Low,,Minor,Low: routine monitoring,0,750.2923611111111,3
+PPU BUKIT KETERI 3K5,Underground,Perlis,0.050589729100465775,Low,,Minor,Low: routine monitoring,0,644.9090277777777,1
+PPU PADANG BESAR CB9,Overhead,Perlis,0.0502534918487072,Low,,Minor,Low: routine monitoring,0,410.67291666666665,3
+PVCB TMN JALI KAN02329,Underground,Perlis,0.049594588577747345,Low,,Minor,Low: routine monitoring,0,619.2173611111111,2
+PDB SM TUNKU BENDAHARA KJT01255,Underground,Jitra,0.049046579748392105,Low,,Minor,Low: routine monitoring,0,623.8777777777777,2
+RUMAH KEDAI 50 UNIT KJT19301,Overhead,Jitra,0.04658341407775879,Low,,Minor,Low: routine monitoring,0,248.41041666666666,2
+PDB RPA JEJAWI KAN00758,Underground,Perlis,0.04622899740934372,Low,,Minor,Low: routine monitoring,0,382.39444444444445,1
+PDB TELEKOM LAMA KANGAR KAN00548,Underground,Perlis,0.045987319201231,Low,,Minor,Low: routine monitoring,0,668.1006944444445,1
+PPU SIMPANG EMPAT CB4,Underground,Perlis,0.04581226408481598,Low,,Minor,Low: routine monitoring,0,771.7194444444444,2
+PPU KUALA NERANG 8K5,Underground,Kuala Nerang,0.0451589971780777,Low,,Minor,Low: routine monitoring,0,776.3305555555555,2
+PPU JERLUN SJ1,Underground,Jitra,0.044829271733760834,Low,,Minor,Low: routine monitoring,0,237.60347222222222,3
+PMU KUALA PERLIS CB3,Underground,Perlis,0.04227638989686966,Low,,Minor,Low: routine monitoring,0,797.8138888888889,2
+PDB KUALA PERLIS KAN01164,Underground,Perlis,0.04169585555791855,Low,,Minor,Low: routine monitoring,0,814.1618055555556,1
+PVCB TITI TINGGI KAN00091,Underground,Perlis,0.03906429558992386,Low,,Minor,Low: routine monitoring,0,840.0458333333333,1
+PPU PELUBANG PL1,Underground,Jitra,0.03870615363121033,Low,,Minor,Low: routine monitoring,0,291.4847222222222,2
+PVCB TMN JALI KAN02326 CB1,Underground,Perlis,0.03776349127292633,Low,,Minor,Low: routine monitoring,0,367.5138888888889,2
+PDB UITM ARAU KAN00863 CB1,Underground,Perlis,0.03714308887720108,Low,,Minor,Low: routine monitoring,0,526.3284722222222,2
+PLB SMPG BKT.TANGGA KJT00877,Underground,Jitra,0.03666969761252403,Low,,Minor,Low: routine monitoring,0,726.5895833333333,1
+PPU MINI PPU KERPAN KRPN 3K5,Underground,Jitra,0.03595821186900139,Low,,Minor,Low: routine monitoring,0,873.4972222222223,1
+PPU SIMPANG EMPAT CB5,Underground,Perlis,0.035843539983034134,Low,,Minor,Low: routine monitoring,0,875.1798611111111,1
+PPU BUKIT KETERI 6K5B,Underground,Perlis,0.03557494282722473,Low,,Minor,Low: routine monitoring,0,879.1416666666667,1
+PPU NAKA 6K5,Underground,Kuala Nerang,0.03542720898985863,Low,,Minor,Low: routine monitoring,0,308.59930555555553,9
+SSU GIANT KGAR KAN02771 CB1,Underground,Perlis,0.03541004657745361,Low,,Minor,Low: routine monitoring,0,485.2729166666667,1
+PVCB REPOH CERIA-VVIP KAN02632 CB1,Underground,Perlis,0.035391319543123245,Low,,Minor,Low: routine monitoring,0,881.8666666666667,1
+PMU BUKIT KAYU HITAM BKH5,Underground,Jitra,0.03453054651618004,Low,,Minor,Low: routine monitoring,0,743.9625,1
+TAMAN JALI KAN02329,Underground,Perlis,0.034440360963344574,Low,,Minor,Low: routine monitoring,1,87.46111111111111,1
+PVCB TMN JALI KAN02329 CB1,Underground,Perlis,0.03394695371389389,Low,,Minor,Low: routine monitoring,0,201.13958333333332,2
+PPU SIMPANG EMPAT CB3,Underground,Perlis,0.03274122625589371,Low,,Minor,Low: routine monitoring,0,698.7034722222222,2
+PDB KOMP KASTAM KANGAR KAN00494 CB1,Underground,Perlis,0.03266294300556183,Low,,Minor,Low: routine monitoring,0,517.3534722222222,1
+PPU UUM SINTOK ST5,Underground,Jitra,0.03256307542324066,Low,,Minor,Low: routine monitoring,0,518.5680555555556,1
+PDB KOMP KASTAM & IMIGRESEN KAN00023 CB1,Overhead,Perlis,0.031214682385325432,Low,,Minor,Low: routine monitoring,0,314.1201388888889,1
+PMU KANGAR CB2,Underground,Perlis,0.030008327215909958,Low,,Minor,Low: routine monitoring,0,550.9201388888889,1
+PMU BUKIT KAYU HITAM BKH11,Underground,Jitra,0.027779312804341316,Low,,Minor,Low: routine monitoring,0,187.36041666666668,1
+PDB ALOR LANCANG KAN00833 CB1,Underground,Perlis,0.02736480161547661,Low,,Minor,Low: routine monitoring,0,195.50208333333333,1
+PLB SMPG BKT.TANGGA KJT00879 CB1,Underground,Jitra,0.027317950502038002,Low,,Minor,Low: routine monitoring,0,196.4298611111111,1
+UKK PADANG BESAR KAN00047 CB1,Underground,Perlis,0.02722153440117836,Low,,Minor,Low: routine monitoring,0,122.09305555555555,1
+FISHING NET KAN00068 CB1,Underground,Perlis,0.026909401640295982,Low,,Minor,Low: routine monitoring,0,204.5861111111111,1
+PPU KHEDN 5K5,Underground,Perlis,0.02682075835764408,Low,,Minor,Low: routine monitoring,0,206.37152777777777,1
+PDB TMN SEMARAK KAN00657 CB1,Underground,Perlis,0.026810599491000175,Low,,Minor,Low: routine monitoring,0,106.97916666666667,1
+PDB KG. KETUL-KETUL KJT00105 CB1,Underground,Jitra,0.02530544251203537,Low,,Minor,Low: routine monitoring,0,237.1784722222222,1
+PPU NEW INDOOR MINI PPU ABI 5K5,Underground,Perlis,0.024955730885267258,Low,,Minor,Low: routine monitoring,0,243.5534722222222,1
+PMU KUALA PERLIS CB13,Underground,Perlis,0.02425910159945488,Low,,Minor,Low: routine monitoring,0,748.3347222222222,1
+PDB TOP FOOD KAN01202,Overhead,Perlis,0.02370910719037056,Low,,Minor,Low: routine monitoring,0,845.3104166666667,1
+SSD UNIMAP ULU PAUH KAN02786,Underground,Perlis,0.023613737896084785,Low,,Minor,Low: routine monitoring,0,605.2152777777778,1
+PDB FLAT POLIS KANGAR KAN01837,Underground,Perlis,0.023456210270524025,Low,,Minor,Low: routine monitoring,0,673.4,1
+SSBT PERMATANG GELOK KJT01548,Underground,Jitra,0.023355918005108833,Low,,Minor,Low: routine monitoring,0,662.9895833333334,1
+PBT S/S FRIM KAN00113,Underground,Perlis,0.022912373766303062,Low,,Minor,Low: routine monitoring,0,864.1993055555556,1
+A/R SEK MEN PEDU,Underground,Kuala Nerang,0.022840624675154686,Low,,Minor,Low: routine monitoring,0,865.3083333333333,1
+PDB QRTS UPP BKT KAYU HITAM KJT01709,Underground,Jitra,0.022568995133042336,Low,,Minor,Low: routine monitoring,1,85.45833333333333,1
+PMU BUKIT KAYU HITAM BKH3,Underground,Jitra,0.02255476824939251,Low,,Minor,Low: routine monitoring,0,255.175,3
+PPU BUKIT KETERI 1P5,Underground,Perlis,0.02240450121462345,Low,,Minor,Low: routine monitoring,0,483.2875,1
+PDB MIEL KUKUM JEJAWI KAN00733 CB1,Underground,Perlis,0.022197090089321136,Low,,Minor,Low: routine monitoring,0,875.4097222222222,1
+PERLIS PLANTATION KAN00237 CB1,Underground,Perlis,0.022123338654637337,Low,,Minor,Low: routine monitoring,0,451.8875,1
+TMN BUNGA PADI KAN00388 CB1,Underground,Perlis,0.021671248599886894,Low,,Minor,Low: routine monitoring,0,883.8784722222222,1
+PDB TOP FOOD KAN01202 CB1,Underground,Perlis,0.021325549110770226,Low,,Minor,Low: routine monitoring,0,889.55625,1
+PBT KG. PADANG-K.NERANG KKN00437 CB1,Underground,Kuala Nerang,0.02106505073606968,Low,,Minor,Low: routine monitoring,0,332.0736111111111,1
+STN SUIS ICQS KJT19258 CB1,Underground,Jitra,0.020875247195363045,Low,,Minor,Low: routine monitoring,0,336.4347222222222,1
+PMU TANJUNG PAUH TP16,Underground,Jitra,0.02079024910926819,Low,,Minor,Low: routine monitoring,0,838.9409722222222,1
+PVCB PANGGAS KAN00281 CB1,Underground,Perlis,0.02075718156993389,Low,,Minor,Low: routine monitoring,0,899.0895833333333,1
+PDB TMN MAHSURI FASA 2D KJT00613 CB1,Underground,Jitra,0.02070051059126854,Low,,Minor,Low: routine monitoring,0,900.0541666666667,1
+PMU TANJUNG PAUH TP18,Underground,Jitra,0.020644670352339745,Low,,Minor,Low: routine monitoring,0,843.2138888888888,1
+PDB FLAT POLIS KANGAR KAN00518 CB1,Underground,Perlis,0.020612603053450584,Low,,Minor,Low: routine monitoring,0,901.5555555555555,1
+PDB DIBUK SYNERGY KAN01259 CB1,Underground,Perlis,0.02042829804122448,Low,,Minor,Low: routine monitoring,0,904.7236111111112,1
+PDB TMN HARMONI KANGAR KAN01924 CB1,Underground,Perlis,0.02014782838523388,Low,,Minor,Low: routine monitoring,0,909.5986111111112,1
+RUMAH KEDAI 50 UNIT KJT19301 CB1,Underground,Jitra,0.019421417266130447,Low,,Minor,Low: routine monitoring,0,922.5409722222222,1
+PDB BEHOR MENTALOON KAN00974,Overhead,Perlis,0.015271201729774475,Low,,Minor,Low: routine monitoring,0,91.65625,1
+PDB DIBUK SYNERGY KAN01260 CB1,Underground,Perlis,0.015232831239700317,Low,,Minor,Low: routine monitoring,0,138.80625,2
+PPU NAKA 4K5,Underground,Kuala Nerang,0.015156512148678303,Low,,Minor,Low: routine monitoring,0,134.28819444444446,2
+RPA PADANG BESAR KAN02910,Underground,Perlis,0.014651181176304817,Low,,Minor,Low: routine monitoring,0,677.6756944444444,1
+TMN TUNKU SARINA NO 6 KJT19072,Underground,Jitra,0.01316478755325079,Low,,Minor,Low: routine monitoring,0,735.8409722222223,1
+SEK MEN CHANGLUN KJT00742,Overhead,Jitra,0.011706923134624958,Low,,Minor,Low: routine monitoring,0,240.0548611111111,1
+SSD KLG ISO TECH KJT00519,Underground,Jitra,0.011457858607172966,Low,,Minor,Low: routine monitoring,0,160.32638888888889,1
+STN SUIS 11KV IKBN JITRA KJT18896,Underground,Jitra,0.011176194064319134,Low,,Minor,Low: routine monitoring,0,243.36388888888888,2
+PPU CHANGLOON CL2,Underground,Jitra,0.008521278388798237,Low,,Minor,Low: routine monitoring,0,507.1715277777778,1
+IKS NAPOH KJT19207,Underground,Jitra,0.00847094040364027,Low,,Minor,Low: routine monitoring,0,334.8666666666667,1
+PPU DARULAMAN 12K5,Underground,Jitra,0.007761506829410791,Low,,Minor,Low: routine monitoring,0,248.41041666666666,1
+PBT FRIM KAN00113,Underground,Perlis,0.006712493021041155,Low,,Minor,Low: routine monitoring,0,91.31597222222223,1
+PDB TMN JALI KAN02326,Underground,Perlis,0.00572206499055028,Low,,Minor,Low: routine monitoring,1,2.053472222222222,1
