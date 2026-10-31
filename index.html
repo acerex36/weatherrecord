@@ -3174,9 +3174,12 @@
                         '<div style="font-size:10px;color:#64748b;margin-top:4px;">' + span + ' &middot; one bar per day</div></div>';
                 };
                 return '<div style="font-size:12px;color:#94a3b8;margin-bottom:2px;">' +
-                    '<i class="fas fa-cloud-showers-heavy"></i> Weather context &mdash; the observed lagged values the model consumed ' +
-                    '(16 of its 35 inputs). No forecast is used.</div>' +
+                    '<i class="fas fa-cloud-showers-heavy"></i> Weather inputs &mdash; observed lags the model was <b>trained on</b> ' +
+                    '(16 of its 35 features) ' +
+                    '<span style="background:#0f9d68;color:#04170f;font-size:10px;font-weight:700;padding:1px 7px;' +
+                    'border-radius:9px;margin-left:6px;vertical-align:1px;">USED BY THE MODEL</span></div>' +
                     '<div style="font-size:11px;color:#64748b;margin-bottom:8px;">' +
+                    'These values are part of the probability, not decoration: change them and the ranking changes. ' +
                     'Bars are daily rainfall over the 7 days ending the day before the scoring date; height &prop; mm, ' +
                     'so the seven values add up to the <b>mm / 7 d</b> figure above. Hover a bar for its date and value.</div>' +
                     '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">' +
@@ -3209,8 +3212,12 @@
                     '<span style="width:11px;height:11px;background:' + c + ';border-radius:2px;display:inline-block;"></span>' + l + '</span>';
                 return '<div style="font-size:12px;color:#94a3b8;margin-bottom:2px;">' +
                     '<i class="fas fa-satellite-dish"></i> Outlook &mdash; forecast rain for the next ' + (f.days || 7) +
-                    ' days. <b style="color:#fbbf24;">Not used by the model</b>: it is context for the reader, ' +
-                    'not a cause of any probability above.</div>' +
+                    ' days ' +
+                    '<span style="background:#f59e0b;color:#1a1205;font-size:10px;font-weight:700;padding:1px 7px;' +
+                    'border-radius:9px;margin-left:6px;vertical-align:1px;">NOT USED BY THE MODEL</span></div>' +
+                    '<div style="font-size:11px;color:#64748b;margin-bottom:8px;">' +
+                    'For planning by eye. The model was trained only on weather that had already happened, ' +
+                    'so a forecast cannot enter the probability - it is not one of the 35 features.</div>' +
                     '<div style="margin-bottom:8px;font-size:11px;color:#94a3b8;display:flex;gap:14px;flex-wrap:wrap;align-items:center;">' +
                     '<span>Daily rain:</span>' + sw('#7c5cf0', 'under 5 mm') + sw('#f59e0b', '5 &ndash; 20 mm') +
                     sw('#dc2626', '20 mm or more') +
