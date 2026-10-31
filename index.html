@@ -3045,6 +3045,8 @@
             return { predict, rowPrediction, renderSummary, init, classes: M.classes };
         })();
 
+        window.RiskPanel = (function () {
+
             // likely failure cause if this trip point faults again, from its last fault's
             // circumstances (component, failure mode, source type, month, hour)
             function causeFor(r) {
@@ -3082,7 +3084,6 @@
                 return e ? { label: e[0], n: e[1] } : null;
             }
 
-        window.RiskPanel = (function () {
             let data = null, error = null;
             let armed = false, uploaded = null;   // risk is shown only after a dataset is uploaded
             const $ = id => document.getElementById(id);
@@ -3368,8 +3369,14 @@
                 $('riskStats').innerHTML = stats(list);
                 $('riskWeather').innerHTML = weather();
                 $('riskForecast').innerHTML = forecast();
-                $('riskTable').innerHTML = table(list);
-                $('riskMatrix').innerHTML = matrix();
+                try { $('riskTable').innerHTML = table(list); }
+                catch (e) { console.error('risk table failed', e);
+                    $('riskTable').innerHTML = '<div style="color:#f87171;padding:14px;font-size:13px;">' +
+                        'Table failed to render: ' + esc(e.message) + '</div>'; }
+                try { $('riskMatrix').innerHTML = matrix(); }
+                catch (e) { console.error('matrix failed', e);
+                    $('riskMatrix').innerHTML = '<div style="color:#f87171;padding:14px;font-size:13px;">' +
+                        'Grid failed to render: ' + esc(e.message) + '</div>'; }
                 wireTips();
             }
 
