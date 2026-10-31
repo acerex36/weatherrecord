@@ -3099,22 +3099,29 @@
                 if (!show.length) return '<div class="no-data" style="color:#94a3b8;padding:16px;">No trip point matches those filters.</div>';
                 const th = 'style="text-align:left;padding:7px 10px;color:#94a3b8;border-bottom:1px solid #29394f;white-space:nowrap;position:sticky;top:0;background:#16212f;"';
                 const td = 'style="padding:6px 10px;border-bottom:1px solid #1c283b;color:#e2e8f0;"';
-                const head = ['#', 'Trip point', 'Installation', 'Station', 'Risk (M6)', 'Band', 'Rule: cnt 90 d', 'Days since last', 'Rating'];
+                const head = ['#', 'Trip point', 'Installation', 'Station', 'Risk (M6)', 'Band', 'Consequence', 'Rule: cnt 90 d', 'Days since last', 'Rating'];
                 let h = '<table style="border-collapse:collapse;width:100%;font-size:13px;"><thead><tr>' +
                         head.map(x => '<th ' + th + '>' + x + '</th>').join('') + '</tr></thead><tbody>';
+                const CONS = { Major: ['#dc2626', '#fecaca'], Moderate: ['#f59e0b', '#fde68a'], Minor: ['#0f9d68', '#bbf7d0'] };
                 show.forEach((r, i) => {
                     const b = BAND[r.likelihood] || ['#64748b', '#e2e8f0'];
+                    const c = CONS[r.consequence] || ['#64748b', '#e2e8f0'];
                     h += '<tr><td ' + td + '>' + (i + 1) + '</td>' +
                          '<td ' + td + '><b>' + esc(r.tp) + '</b></td>' +
                          '<td ' + td + '>' + esc(r.inst) + '</td>' +
                          '<td ' + td + '>' + esc(r.station) + '</td>' +
                          '<td ' + td + '><b>' + (r.prob * 100).toFixed(1) + '%</b></td>' +
                          '<td ' + td + '><span style="background:' + b[0] + ';color:' + b[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + r.likelihood + '</span></td>' +
+                         '<td ' + td + '><span title="' + esc(r.likelihood) + ' likelihood x ' + esc(r.consequence) + ' consequence" style="background:' + c[0] + ';color:' + c[1] + ';padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">' + esc(r.consequence || '&ndash;') + '</span></td>' +
                          '<td ' + td + '>' + (r.cnt_90d >= 2 ? '<span style="color:#dc2626;font-weight:700;">' + r.cnt_90d + ' flagged</span>' : r.cnt_90d) + '</td>' +
                          '<td ' + td + '>' + (r.days_since_last == null ? '&mdash;' : Math.round(r.days_since_last)) + '</td>' +
                          '<td ' + td + ' style="color:#94a3b8;">' + esc(r.rating) + '</td></tr>';
                 });
-                return h + '</tbody></table>';
+                return h + '</tbody></table>' +
+                    '<p style="margin:8px 0 0;color:#64748b;font-size:11px;">' +
+                    'The Rating is read off the HIRARC grid below: <b>Band x Consequence</b>. ' +
+                    '"and repair planning" appears only in the High-likelihood x Major-consequence cell, ' +
+                    'so it is driven by the asset role, not by the probability alone.</p>';
             }
 
             function matrix() {
@@ -3262,7 +3269,7 @@
             }
             document.addEventListener('DOMContentLoaded', init);
             return { init: init, reload: load, get data() { return data; },
-                     _matrix: matrix, _weather: weather, _forecast: forecast, _stats: stats,
+                     _matrix: matrix, _weather: weather, _forecast: forecast, _stats: stats, _table: table,
                      _setData: function (d) { data = d; error = null; } };
         })();
 
