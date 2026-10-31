@@ -1,0 +1,11 @@
+N,domain,origins,positives,positive_rate
+30,Underground,71100,1958,0.0275
+30,Overhead,9254,202,0.0218
+60,Underground,69541,3663,0.0527
+60,Overhead,9021,388,0.043
+90,Underground,68035,5212,0.0766
+90,Overhead,8795,563,0.064
+180,Underground,63550,9086,0.143
+180,Overhead,8127,946,0.1164
+365,Underground,54864,13561,0.2472
+365,Overhead,6837,1469,0.2149
