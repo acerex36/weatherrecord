@@ -1127,12 +1127,16 @@
                         style="width:100%;margin-top:4px;padding:7px;background:#0f172a;color:#e2e8f0;border:1px solid #29394f;border-radius:6px;"></label>
             </div>
             <div id="riskStats" style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;"></div>
+            <div id="riskWeather" style="margin-top:16px;"></div>
+            <div id="riskForecast" style="margin-top:14px;"></div>
             <div id="riskTable" style="overflow:auto;max-height:560px;margin-top:14px;"></div>
             <p style="margin:12px 0 0;color:#64748b;font-size:12px;">
                 Probability that a trip point that has <b>already faulted</b> faults again within
                 <span id="riskN">N</span> days. Ranked, not a calibrated certainty: PR-AUC 0.146 against a
-                0.074 base rate, so treat the bands as inspection priority. Consequence is a placeholder
-                until outage duration is supplied, so the HIRARC grid currently has one live column.
+                0.074 base rate, so treat the bands as inspection priority. Consequence is a
+                <b>proxy from the trip point's role in the network</b> (PMU / substation switchboard =
+                Major, PPU / PDB = Moderate, service level = Minor), because the records carry no
+                outage duration or customer count. Report it as a proxy, not a measurement.
             </p>
         </div>
         <div style="background:#16212f;border:1px solid #29394f;border-radius:10px;padding:18px;">
@@ -3050,6 +3054,11 @@
             const $ = id => document.getElementById(id);
             const BAND = { High: ['#dc2626', '#fecaca'], Medium: ['#f59e0b', '#fde68a'], Low: ['#0f9d68', '#bbf7d0'] };
             const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const shortDate = s => {
+                const p = String(s || '').split('-');
+                return p.length === 3 ? (+p[2]) + ' ' + MON[(+p[1]) - 1] : String(s || '');
+            };
 
             async function load() {
                 try {
@@ -3081,8 +3090,8 @@
                     '<div style="font-size:20px;font-weight:700;color:' + (c || '#e2e8f0') + ';">' + v + '</div>' +
                     '<div style="font-size:11px;color:#94a3b8;margin-top:2px;">' + l + '</div></div>';
                 return card(n, 'trip points shown') + card(high, 'in the High band', BAND.High[0]) +
-                       card(flagged, 'also flagged by the rule (&ge;2 in 90 d)') +
-                       card(inTop + '/10', 'of the model top 10 flagged by the rule');
+                       card(flagged, 'flagged by the M0 rule (&ge;2 faults in 90 d)') +
+                       card(inTop + ' / 10', 'of the model top 10, also flagged by M0');
             }
 
             function table(list) {
@@ -3142,6 +3151,74 @@
                 return h + '</table><p style="margin:10px 0 0;color:#64748b;font-size:12px;">' + foot + '</p>';
             }
 
+            function weather() {
+                const w = data.weather;
+                if (!w || !w.station_features) return '';
+                const sf = w.station_features, days = w.last_7_days || {};
+                const num = v => (v === null || v === undefined) ? '&ndash;' : v;
+                const card = (st, f) => {
+                    const d7 = days[st] || [];
+                    const maxR = Math.max(1, ...d7.map(x => x.rain_mm || 0));
+                    const bars = d7.map(x =>
+                        '<span title="' + esc(x.date) + ': ' + num(x.rain_mm) + ' mm" style="display:inline-block;' +
+                        'width:7px;height:' + Math.max(2, Math.round(20 * (x.rain_mm || 0) / maxR)) +
+                        'px;background:#0891b2;margin-right:2px;vertical-align:bottom;"></span>').join('');
+                    const span = d7.length ? shortDate(d7[0].date) + ' &ndash; ' + shortDate(d7[d7.length - 1].date) : '';
+                    return '<div style="background:#0f172a;border:1px solid #29394f;border-radius:8px;padding:10px 12px;">' +
+                        '<div style="font-size:12px;color:#94a3b8;">' + esc(st) + '</div>' +
+                        '<div style="font-size:19px;font-weight:700;color:#e2e8f0;margin:2px 0;">' + num(f.rain_sum_7) +
+                        ' <span style="font-size:11px;color:#94a3b8;font-weight:400;">mm / 7 d</span></div>' +
+                        '<div style="font-size:11px;color:#94a3b8;line-height:1.7;">30 d ' + num(f.rain_sum_30) + ' mm &middot; ' +
+                        num(f.temp_mean_7) + ' &deg;C &middot; RH ' + num(f.rh_mean_7) + ' % &middot; soil ' + num(f.soil_mean_7) + '</div>' +
+                        '<div style="margin-top:7px;">' + bars + '</div>' +
+                        '<div style="font-size:10px;color:#64748b;margin-top:4px;">' + span + ' &middot; one bar per day</div></div>';
+                };
+                return '<div style="font-size:12px;color:#94a3b8;margin-bottom:2px;">' +
+                    '<i class="fas fa-cloud-showers-heavy"></i> Weather context &mdash; the observed lagged values the model consumed ' +
+                    '(16 of its 35 inputs). No forecast is used.</div>' +
+                    '<div style="font-size:11px;color:#64748b;margin-bottom:8px;">' +
+                    'Bars are daily rainfall over the 7 days ending the day before the scoring date; height &prop; mm, ' +
+                    'so the seven values add up to the <b>mm / 7 d</b> figure above. Hover a bar for its date and value.</div>' +
+                    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">' +
+                    Object.keys(sf).sort().map(st => card(st, sf[st])).join('') + '</div>';
+            }
+
+            function forecast() {
+                const f = data.forecast;
+                if (!f || !f.stations) return '';
+                const card = (st, days) => {
+                    const tot = days.reduce((a, b) => a + (b.rain_mm || 0), 0);
+                    const maxR = Math.max(1, ...days.map(d => d.rain_mm || 0));
+                    const bars = days.map(d => {
+                        const mm = d.rain_mm || 0;
+                        const h = Math.max(3, Math.round(34 * mm / maxR));
+                        const col = mm >= 20 ? '#dc2626' : (mm >= 5 ? '#f59e0b' : '#7c5cf0');
+                        return '<span title="' + esc(d.date) + ': ' + (d.rain_mm == null ? '?' : d.rain_mm) + ' mm' +
+                            (d.temp_c == null ? '' : ', ' + d.temp_c + ' C') + '" style="display:inline-block;width:20px;height:' +
+                            h + 'px;background:' + col + ';margin-right:3px;vertical-align:bottom;border-radius:2px 2px 0 0;"></span>';
+                    }).join('');
+                    return '<div style="background:#0f172a;border:1px solid #29394f;border-radius:8px;padding:10px 12px;">' +
+                        '<div style="font-size:12px;color:#94a3b8;">' + esc(st) + '</div>' +
+                        '<div style="font-size:17px;font-weight:700;color:#e2e8f0;margin:2px 0;">' + tot.toFixed(1) +
+                        ' <span style="font-size:11px;color:#94a3b8;font-weight:400;">mm / next ' + days.length + ' d</span></div>' +
+                        '<div style="margin-top:6px;">' + bars + '</div>' +
+                        '<div style="font-size:10px;color:#64748b;margin-top:4px;">' +
+                        shortDate(days[0].date) + ' &ndash; ' + shortDate(days[days.length - 1].date) + ' &middot; one bar per day</div></div>';
+                };
+                const sw = (c, l) => '<span style="display:inline-flex;align-items:center;gap:5px;">' +
+                    '<span style="width:11px;height:11px;background:' + c + ';border-radius:2px;display:inline-block;"></span>' + l + '</span>';
+                return '<div style="font-size:12px;color:#94a3b8;margin-bottom:2px;">' +
+                    '<i class="fas fa-satellite-dish"></i> Outlook &mdash; forecast rain for the next ' + (f.days || 7) +
+                    ' days. <b style="color:#fbbf24;">Not used by the model</b>: it is context for the reader, ' +
+                    'not a cause of any probability above.</div>' +
+                    '<div style="margin-bottom:8px;font-size:11px;color:#94a3b8;display:flex;gap:14px;flex-wrap:wrap;align-items:center;">' +
+                    '<span>Daily rain:</span>' + sw('#7c5cf0', 'under 5 mm') + sw('#f59e0b', '5 &ndash; 20 mm') +
+                    sw('#dc2626', '20 mm or more') +
+                    '<span style="color:#64748b;">height &prop; mm &middot; hover a bar for the exact date, rain and temperature</span></div>' +
+                    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">' +
+                    Object.keys(f.stations).sort().map(st => card(st, f.stations[st])).join('') + '</div>';
+            }
+
             function render() {
                 const el = $('riskTable');
                 if (!el) return;
@@ -3157,10 +3234,13 @@
                 $('riskMeta').innerHTML = 'Scored at <b style="color:#e2e8f0;">' + esc(m.origin) + '</b> &middot; ' +
                     'window N = <b style="color:#e2e8f0;">' + esc(m.N_days) + ' days</b> &middot; ' +
                     'records end ' + esc(m.data_end) + ' &middot; ' +
+                    'consequence ' + esc(m.consequence_source || 'not set') + ' &middot; ' +
                     'export parity ' + (m.parity_passed ? '<span style="color:#0f9d68;">passed</span>' : '<span style="color:#dc2626;">FAILED</span>') +
                     ' &middot; generated ' + esc(m.generated);
                 $('riskN').textContent = m.N_days;
                 $('riskStats').innerHTML = stats(list);
+                $('riskWeather').innerHTML = weather();
+                $('riskForecast').innerHTML = forecast();
                 $('riskTable').innerHTML = table(list);
                 $('riskMatrix').innerHTML = matrix();
             }
@@ -3175,7 +3255,8 @@
             }
             document.addEventListener('DOMContentLoaded', init);
             return { init: init, reload: load, get data() { return data; },
-                     _matrix: matrix, _setData: function (d) { data = d; error = null; } };
+                     _matrix: matrix, _weather: weather, _forecast: forecast, _stats: stats,
+                     _setData: function (d) { data = d; error = null; } };
         })();
 
         document.addEventListener('DOMContentLoaded', function () { init(); window.MLP.init(); });
