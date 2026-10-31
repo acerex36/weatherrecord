@@ -13,7 +13,7 @@
   "consequence_source": "asset",
   "consequence_note": "consequence is an asset-role proxy: PMU / substation switchboard = Major, PPU / PDB = Moderate, service-level trip point = Minor. The records contain no outage duration or customer count, so this is a judgement call, not a measurement. Supply MVData...csv (CustInt / SaidiTNB) and rerun with --consequence cust_int to measure it.",
   "n_trip_points": 430,
-  "generated": "2026-10-27T20:50:07",
+  "generated": "2026-10-27T21:05:06",
   "note": "consequence is an asset-role proxy: PMU / substation switchboard = Major, PPU / PDB = Moderate, service-level trip point = Minor. The records contain no outage duration or customer count, so this is a judgement call, not a measurement. Supply MVData...csv (CustInt / SaidiTNB) and rerun with --consequence cust_int to measure it. Identifiers anonymised for a public demo build.",
   "demo": true
  },
